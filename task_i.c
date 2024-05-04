@@ -68,7 +68,6 @@ int main(void) {
             printf(",");
         }
     }
-    printf("\n");
 
     return EXIT_SUCCESS;
 }
