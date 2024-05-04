@@ -3,16 +3,19 @@
 #include <string.h>
 
 int main(void) {
+    // Define constants for the number of rows and columns in the data array
     #define N 201
     #define M 3
     double data[N][M];
 
+    // Define constant for the maximum number of characters in a line of the file
     #define MAXCHAR 100
     char buffer[MAXCHAR];
     int row = 0;
     int column = 0;
     char *ptr;
 
+    // Open the data file for reading
     char fn[] = "data.csv";
     FILE *fptr;
     fptr = fopen(fn, "r");
@@ -20,6 +23,8 @@ int main(void) {
         printf("Error: Unable to open the file.\n");
         return 1;
     }
+
+    // Read data from the file into the data array
     while (fgets(buffer, MAXCHAR, fptr)) {
         column = 0;
         row++;
